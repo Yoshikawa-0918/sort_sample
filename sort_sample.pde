@@ -50,6 +50,7 @@ void draw(){
     line(i * 100, 0 , i * 100 , 200);
   }
   
+  //配列内の要素の描画
   for(int i = 0; i < data1.length ; i++){
     textSize(50);
     textAlign(CENTER);
@@ -64,10 +65,12 @@ void fade(){
   rect(0,0,600,300);
 }
 
+//SortStartボタンが押されたときの処理
 public void SortStart(){
   s.bubbleSort(data1);
 }
 
+//Shuffleボタンが押されたときの処理
 public void Shuffle(){
   for(int i = 0 ; i < data1.length ; i++){
     int x = (int)random(6) + 1;
@@ -76,6 +79,7 @@ public void Shuffle(){
   }
 }
 
+//Closeボタンが押されたときの処理
 public void Close(){
   exit();
 }
