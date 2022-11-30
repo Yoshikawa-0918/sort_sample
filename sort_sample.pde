@@ -1,26 +1,22 @@
 import controlP5.*;
 
-class Sort{
-  void bubbleSort(int[] data){
-    for(int i = data.length-1 ; i > 0 ; i--) {
-        for(int j = 0; j < i ; j++) {
-          if(data[j] > data[j + 1]) {
-            int tmp = data[j];
-            data[j] = data[j + 1];
-            data[j + 1] = tmp;
-          }
+void bubbleSort(int[] data){
+  for(int i = data.length-1 ; i > 0 ; i--) {
+      for(int j = 0; j < i ; j++) {
+        if(data[j] > data[j + 1]) {
+          int tmp = data[j];
+          data[j] = data[j + 1];
+          data[j + 1] = tmp;
         }
       }
-  }
+    }
 }
 
-Sort s;
 ControlP5 cp5;
 int[] data1 = {4,5,6,3,2,1};
 
 
 void setup(){
-  s  = new Sort();
   cp5 = new ControlP5(this);
   size(600,300);
   
@@ -67,7 +63,7 @@ void fade(){
 
 //SortStartボタンが押されたときの処理
 public void SortStart(){
-  s.bubbleSort(data1);
+  bubbleSort(data1);
 }
 
 //Shuffleボタンが押されたときの処理
